@@ -47,7 +47,7 @@ author: {firstName:string, lastName:string}}`
 DELETE `localhost:8080/api/v1/quote/{queryId}`
 with `queryId` which is id of query
 
-There are examples of usage:
+There are examples of usage by Windows Power Shell:
 ```
 GET:
 Invoke-RestMethod -Method 'Get' -Uri 'http://localhost:8080/api/v1/quote' -ContentType 'application/json'
