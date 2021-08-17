@@ -37,6 +37,7 @@ abstract class ModelRepositoryImpl<U extends Entity> implements ModelRepository<
 
     @Override
     public void update(long id, U object) {
+        if (data.get(id) == null) return;
         data.put(id, object);
     }
 
