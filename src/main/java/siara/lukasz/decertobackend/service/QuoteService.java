@@ -11,7 +11,11 @@ import java.util.List;
 public class QuoteService {
 
     @Autowired
-    private QuoteRepositoryImpl quoteRepository;
+    public QuoteService(QuoteRepositoryImpl quoteRepository){
+        this.quoteRepository = quoteRepository;
+    }
+
+    QuoteRepositoryImpl quoteRepository;
 
     private long simulateAutoincrementId = 0;
 

@@ -12,6 +12,10 @@ import java.util.List;
 public class QuoteController {
 
     @Autowired
+    public QuoteController(QuoteService quoteService){
+        this.quoteService = quoteService;
+    }
+
     QuoteService quoteService;
 
     @GetMapping("/quote")
