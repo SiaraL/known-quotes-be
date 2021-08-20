@@ -25,9 +25,8 @@ abstract class ModelRepositoryImpl<U extends Entity> implements ModelRepository<
     }
 
     @Override
-    public long add(long simulateAutoincrementId, U object) {
-        data.put(simulateAutoincrementId, object);
-        return simulateAutoincrementId;
+    public void add(U object) {
+        data.put(object.getId(), object);
     }
 
     @Override

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ModelRepository<T> {
 
-    long add(long simulateAutoincrementId, T object);
+    void add(T object);
     List<T> getAll();
     void update(long id, T object);
     void delete(long id);

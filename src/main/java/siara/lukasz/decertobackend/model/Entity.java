@@ -1,6 +1,6 @@
 package siara.lukasz.decertobackend.model;
 
-public class Entity {
+public abstract class Entity {
 
     private long id;
 

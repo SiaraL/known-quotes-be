@@ -1,9 +1,14 @@
 package siara.lukasz.decertobackend.model;
 
-public class Author{
+public class Author extends Entity{
 
+    private static long simulateAutoincrementId = 1;
     private String firstName;
     private String lastName;
+
+    public Author(){
+        this.setId(simulateAutoincrementId++);
+    }
 
     public String getFirstName() {
         return firstName;

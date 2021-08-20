@@ -17,17 +17,12 @@ public class QuoteService {
 
     QuoteRepositoryImpl quoteRepository;
 
-    private long simulateAutoincrementId = 0;
-
     public List<Quote> getQuotes(){
         return quoteRepository.getAll();
     }
 
-    public long addQuote(Quote quote){
-        simulateAutoincrementId++;
-        System.out.println(simulateAutoincrementId);
-        quote.setId(simulateAutoincrementId);
-        return quoteRepository.add(simulateAutoincrementId, quote);
+    public void addQuote(Quote quote){
+        quoteRepository.add(quote);
     }
 
     public void updateQuote(long id, Quote quote){
