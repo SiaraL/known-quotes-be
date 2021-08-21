@@ -2,6 +2,7 @@ package siara.lukasz.decertobackend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import siara.lukasz.decertobackend.dto.QuoteDto;
 import siara.lukasz.decertobackend.model.Quote;
 import siara.lukasz.decertobackend.repository.impl.QuoteRepositoryImpl;
 
@@ -17,7 +18,7 @@ public class QuoteService {
 
     QuoteRepositoryImpl quoteRepository;
 
-    public List<Quote> getQuotes(){
+    public List<QuoteDto> getQuotes(){
         return quoteRepository.getAll();
     }
 

@@ -2,6 +2,7 @@ package siara.lukasz.decertobackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import siara.lukasz.decertobackend.dto.QuoteDto;
 import siara.lukasz.decertobackend.model.Quote;
 import siara.lukasz.decertobackend.service.QuoteService;
 
@@ -19,7 +20,7 @@ public class QuoteController {
     QuoteService quoteService;
 
     @GetMapping("/quote")
-    public List<Quote> getQuotes(){
+    public List<QuoteDto> getQuotes(){
         return quoteService.getQuotes();
     }
 
