@@ -13,6 +13,8 @@ public class AuthorDto extends Dto{
         this.lastName = author.getLastName();
     }
 
+    public AuthorDto(){}
+
     public String getFirstName() {
         return firstName;
     }
